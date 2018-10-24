@@ -36,7 +36,7 @@ public class KeyVaultPropertySource extends EnumerablePropertySource<KeyVaultCli
 
     @Override
     public String[] getPropertyNames() {
-        return (String[]) this.secretValues.keySet().toArray();
+        return this.secretNames.keySet().toArray(new String[this.secretValues.size()]);
     }
 
     @Override
